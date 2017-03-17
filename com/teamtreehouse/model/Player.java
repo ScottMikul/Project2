@@ -1,7 +1,5 @@
 package com.teamtreehouse.model;
-
 import java.io.Serializable;
-
 public class Player implements Comparable<Player>, Serializable {
   private static final long serialVersionUID = 1L;
 
@@ -29,7 +27,7 @@ public class Player implements Comparable<Player>, Serializable {
     return heightInInches;
   }
 
-  public boolean isPreviousExperience() {
+  public boolean isExperienced() {
     return previousExperience;
   }
 
@@ -61,4 +59,13 @@ public class Player implements Comparable<Player>, Serializable {
     result = 31 * result + (previousExperience ? 1 : 0);
     return result;
   }
+  public String toString(){
+
+    return firstName +" "+ lastName +"Height: "+heightInInches+"in. Has had experience? "+ previousExperience;
+  }
+
+  public String firstLast(){
+    return firstName +" " + lastName;
+  }
+
 }
